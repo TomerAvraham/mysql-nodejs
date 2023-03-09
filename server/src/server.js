@@ -6,5 +6,8 @@ const app = express();
 
 app.use(bodyParser.json());
 
+const routes = require("./routes");
+app.use("/", routes);
+
 const port = config.port;
 app.listen(port, () => console.log("Running on " + port));
